@@ -1,7 +1,8 @@
-import { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
+import type { InputHTMLAttributes } from 'react';
 import { cn } from '@/shared/utils/cn';
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   icon?: 'search' | 'none';
   fullWidth?: boolean;
 }
@@ -25,6 +26,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             />
           </svg>
         )}
+
         <input
           ref={ref}
           className={cn(

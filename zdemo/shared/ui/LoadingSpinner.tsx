@@ -1,3 +1,4 @@
+import React from 'react';
 import { cn } from '@/shared/utils/cn';
 
 interface LoadingSpinnerProps {
@@ -6,6 +7,11 @@ interface LoadingSpinnerProps {
 
 export function LoadingSpinner({ className }: LoadingSpinnerProps) {
   return (
-    <div className={cn('animate-pulse bg-gray-800 rounded-2xl', className)} />
+    <div
+      className={cn(
+        'animate-pulse bg-gray-800 rounded-2xl',
+        className
+      )}
+    />
   );
 }
